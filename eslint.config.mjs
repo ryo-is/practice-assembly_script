@@ -22,7 +22,7 @@ const __dirname = path.dirname(__filename);
 
 export default [
   {
-    ignores: [],
+    ignores: ['build/*'],
   },
   js.configs.recommended,
   ESlintConfigPrettier,
