@@ -8,12 +8,26 @@
     "asbuild:debug": "asc assembly/index.ts --target debug",
     "asbuild:release": "asc assembly/index.ts --target release",
     "asbuild": "npm run asbuild:debug && npm run asbuild:release",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs 'assembly/**/*.{ts,tsx}' --fix",
+    "fmt": "prettier --log-level warn -w \"**/*.(ts|tsx)\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "assemblyscript": "0.27.22"
+    "@eslint/eslintrc": "3.0.0",
+    "@eslint/js": "8.56.0",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "assemblyscript": "0.27.22",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-unused-imports": "3.0.0",
+    "prettier": "3.1.1"
   },
   "type": "module",
   "exports": {
