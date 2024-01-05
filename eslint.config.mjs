@@ -22,7 +22,7 @@ const __dirname = path.dirname(__filename);
 
 export default [
   {
-    ignores: ['build/*'],
+    ignores: ['src/build/*'],
   },
   js.configs.recommended,
   ESlintConfigPrettier,
@@ -132,7 +132,10 @@ export default [
         },
       ],
       'import/no-extraneous-dependencies': 0,
+      // eslint-disable-next-line no-dupe-keys
+      'import/extensions': 'off',
       'jsx-a11y/html-has-lang': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'error',
     },
     settings: {
       react: {
