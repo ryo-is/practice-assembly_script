@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/extensions
 import { add } from './build/release.js';
 var main = function () {
     console.log('main');
