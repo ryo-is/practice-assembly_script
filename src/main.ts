@@ -25,7 +25,11 @@ const main = (): void => {
     '#JoinTextResult',
   ) as HTMLDivElement;
   if (joinTextResultElm) {
-    joinTextResultElm.innerText = joinText('Hello', 'world!!!', ' ');
+    joinTextResultElm.innerText = joinText({
+      str1: 'Hello',
+      str2: 'world!!!',
+      separator: ' ',
+    });
   }
 };
 
